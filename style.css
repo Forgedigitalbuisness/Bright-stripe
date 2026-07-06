@@ -902,3 +902,52 @@ color:#1b7d3c;
 }
 
 }
+/* =========================
+   ANIMATED HAMBURGER (X MENU)
+========================= */
+
+.menu-toggle{
+display:none;
+width:30px;
+height:22px;
+position:relative;
+cursor:pointer;
+z-index:2000;
+}
+
+.menu-toggle span{
+position:absolute;
+height:3px;
+width:100%;
+background:#1b7d3c;
+border-radius:10px;
+transition:.3s ease;
+}
+
+/* 3 lines */
+.menu-toggle span:nth-child(1){
+top:0;
+}
+
+.menu-toggle span:nth-child(2){
+top:9px;
+}
+
+.menu-toggle span:nth-child(3){
+top:18px;
+}
+
+/* OPEN STATE → turns into X */
+.menu-toggle.active span:nth-child(1){
+top:9px;
+transform:rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2){
+opacity:0;
+}
+
+.menu-toggle.active span:nth-child(3){
+top:9px;
+transform:rotate(-45deg);
+}
